@@ -1,10 +1,11 @@
 #!/usr/bin/env bash
 
-apt-get update
-apt-get install -y git gcc g++ gdb make curl wget
+sudo apt-get update
+sudo apt-get install -y git gcc g++ gdb make curl wget
 
 if [ ! -d "/tmp/pkgs" ]; then
-  mkdir -p /tmp/pkgs
+  sudo mkdir -p /tmp/pkgs
+  chmod 0777 /tmp/pkgs
 fi
 
 # fetching cmake
@@ -14,5 +15,5 @@ if [ ! -f "/tmp/pkgs/cmake.sh" ]; then
 fi
 
 if [ ! -f "/usr/bin/cmake" ]; then
-  sh /tmp/pkgs/cmake.sh --skip-license --prefix=/usr
+  sudo sh /tmp/pkgs/cmake.sh --skip-license --prefix=/usr
 fi
