@@ -1,0 +1,63 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/android:api-29-ndk
+    environment:
+      CXX: /usr/bin/g++
+      CC: /usr/bin/gcc
+      JVM_OPTS: -Xmx3200m
+    steps:
+      - restore_cache:
+          key: setup-{{ checksum ".circleci/setup.sh" }}
+
+      - run:
+          name: Setting up system
+          command: $(which bash) .circleci/setup.sh
+
+      - save_cache:
+          key: setup-{{ checksum ".circleci/setup.sh" }}
+          paths:
+            - /tmp/pkgs
+
+      - run:
+          name: Avoid hosts unknown for github
+          command: mkdir -p ~/.ssh/ && echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
+      - run:
+        name: Cloning repo
+        command: git clone --recursive https://github.com/edwardstock/bip3x.git .
+
+      - restore_cache:
+          key: jars-{{ checksum "build.gradle" }}-{{ checksum  "bip3x/build.gradle" }}
+
+      - run:
+          name: gradlew permissions
+          command: sudo chmod +x ./gradlew
+
+      - run:
+          name: Download Dependencies
+          command: ./gradlew androidDependencies
+
+      - save_cache:
+          paths:
+            - ~/.gradle
+          key: jars-{{ checksum "build.gradle" }}-{{ checksum  "bip3x/build.gradle" }}
+
+      - run:
+          name: Pre-build native libraries for current system
+          command: $(which bash) .circleci/build_test_libs.sh
+
+      - run:
+          name: Run Tests
+          command: $(which bash) .circleci/test.sh
+
+      - store_artifacts: # for display in Artifacts: https://circleci.com/docs/2.0/artifacts/
+          path: bip3x/build/reports
+          destination: reports
+
+      - store_test_results: # for display in Test Summary: https://circleci.com/docs/2.0/collect-test-data/
+          path: bip3x/build/test-results
+
+      - run:
+          name: deploy to maven
+          command: $(which bash) publish_remote.sh

@@ -1,0 +1,3 @@
+rootProject.name='bip3x app'
+include ':app'
+include ':bip3x'

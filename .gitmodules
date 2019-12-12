@@ -1,0 +1,6 @@
+[submodule "bip3x/src/main/cpp/bip3x"]
+	path = bip3x/src/main/cpp/bip3x
+	url = https://github.com/edwardstock/bip3x.git
+[submodule "scripts"]
+	path = scripts
+	url = https://github.com/edwardstock/android-lib-tools.git
