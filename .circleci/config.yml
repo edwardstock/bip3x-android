@@ -23,9 +23,10 @@ jobs:
       - run:
           name: Avoid hosts unknown for github
           command: mkdir -p ~/.ssh/ && echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
+
       - run:
-        name: Cloning repo
-        command: git clone --recursive https://github.com/edwardstock/bip3x.git .
+          name: Cloning repo
+          command: git clone --recursive https://github.com/edwardstock/bip3x.git .
 
       - restore_cache:
           key: jars-{{ checksum "build.gradle" }}-{{ checksum  "bip3x/build.gradle" }}

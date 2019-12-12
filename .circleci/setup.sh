@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 apt-get update
-apt-get install -y gcc g++ gdb make curl wget
+apt-get install -y git gcc g++ gdb make curl wget
 
 if [ ! -d "/tmp/pkgs" ]; then
   mkdir -p /tmp/pkgs
