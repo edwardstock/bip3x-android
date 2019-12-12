@@ -10,7 +10,7 @@ jobs:
     steps:
       - run:
           name: Cloning repo
-          command: git clone --recursive https://github.com/edwardstock/bip3x.git .
+          command: git clone --recursive https://github.com/edwardstock/bip3x-android.git .
 
       - restore_cache:
           key: setup-{{ checksum ".circleci/setup.sh" }}
