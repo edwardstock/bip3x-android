@@ -12,7 +12,7 @@ fi
 # fetching cmake
 
 if [ ! -f "/tmp/pkgs/cmake.sh" ]; then
-  sudo wget -O /tmp/pkgs/cmake.sh https://github.com/Kitware/CMake/releases/download/v3.14.5/cmake-3.14.5-Linux-x86_64.sh
+  sudo wget -O /tmp/pkgs/cmake.sh https://github.com/Kitware/CMake/releases/download/v3.10.2/cmake-3.10.2-Linux-x86_64.sh
 fi
 
 if [ ! -f "/usr/bin/cmake" ]; then
