@@ -38,12 +38,6 @@ ext {
     }
 }
 
-def libPath = System.getenv('BIP39_LIBS')
-if(hasProperty("nativeLibPath")) {
-    libPath = getProperty("nativeLibPath")
-}
-println "Native lib path: ${libPath}"
-
 android {
     compileSdkVersion maxSdk
     buildToolsVersion buildToolsVers
@@ -64,7 +58,7 @@ android {
                         '-DENABLE_BIP39_CONAN=Off',
                         '-DENABLE_TOOLBOX_TEST=Off',
                         '-DENABLE_TOOLBOX_CONAN=Off',
-                        '-DENABLE_SHARED=On',
+                        '-DENABLE_SHARED=Off',
                 ]
                 cppFlags "-std=c++14"
             }
@@ -96,9 +90,6 @@ android {
 
     testOptions {
         unitTests {
-            all {
-                jvmArgs "-Djava.library.path=${libPath}"
-            }
             includeAndroidResources = true
             returnDefaultValues = true
         }

@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
+set -x
 
-BIP39_LIBS=${PWD}/_libs/lib ./gradlew lint test
+./gradlew lint test -PjvmArgs="-Djava.library.path=${PWD}/_libs/lib"
