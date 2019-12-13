@@ -2,7 +2,7 @@
 set -x
 
 sudo apt-get update
-sudo apt-get install -y git gcc g++ gdb make curl wget
+sudo apt-get install -y git gcc g++ gdb make curl wget ninja-build
 
 if [ ! -d "/tmp/pkgs" ]; then
   sudo mkdir -p /tmp/pkgs
