@@ -4,8 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-import com.edwardstock.bip3x.NativeBip39;
-
 public class MainActivity extends AppCompatActivity {
 
     @Override
