@@ -1,8 +1,9 @@
 package com.edwardstock.bip3x_app;
 
-import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 

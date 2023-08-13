@@ -1,0 +1,180 @@
+[versions]
+minSdk = "26"
+maxSdk = "33"
+buildTools = "31.0.0"
+ndkVersion = "21.1.6352462"
+cmakeVersion = "3.22.1"
+agp = "8.0.2"
+ksp = "1.8.20-1.0.11"
+
+
+android-core = "1.10.0"
+android-test = "1.4.0"
+android-appcompat = "1.6.1"
+android-lifecycle-base = "2.6.0"
+android-arch-base = "2.1.0"
+android-constraintlayout = "2.1.4"
+android-work = "2.8.1"
+
+android-recyclerview = "1.3.0"
+android-recyclerviewSelection = "1.2.0-alpha01"
+android-material = "1.8.0"
+android-navigation = "2.5.3"
+android-paging = "3.1.1"
+android-preferences = "1.2.0"
+android-biometric = "1.2.0-alpha05"
+android-security-base = "1.1.0-alpha05"
+android-security-identity = "1.0.0-alpha03"
+android-security-appAuthenticator = "1.0.0-alpha02"
+android-camera = "1.2.1"
+
+kotlin-base = "1.8.20"
+kotlin-coroutines = "1.7.0-RC"
+kotlin-serialization-json = "1.5.0"
+kotlin-datetime = "0.3.2"
+hilt-base = "2.46"
+
+timber = "5.0.1"
+sl4j = "2.0.0-alpha7"
+moshi = "1.14.0"
+
+ktor-base = "2.0.3"
+
+gms-auth = "20.4.0"
+gms-drive = "17.0.0"
+gms-gcm = "17.0.0"
+#google-api = "1.32.1"
+google-api = "2.2.0"
+google-services = "4.3.15"
+google-ml = "17.0.3"
+
+#firebase-auth = "8.0.2"
+wire-base = "4.5.5"
+appauth = "0.11.1"
+protobuf = "0.8.19"
+paris = "2.0.2"
+spongycastle = "1.58.0.0"
+eddsa = "0.3.0"
+argon2 = "13.1@aar"
+
+[libraries]
+base-javax-annotations-jsr250 = { module = "javax.annotation:jsr250-api", version = "1.0" }
+base-javax-annotations-jsr330 = { module = "javax.inject:jsr330-api", version = "0.9" }
+base-javax-annotations-inject = { module = "javax.inject:javax.inject", version = "1" }
+
+base-kotlin-coroutines = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm", version.ref = "kotlin-coroutines" }
+base-kotlin-gradle = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin-base" }
+base-kotlin-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlin-serialization-json" }
+
+base-android-gradle = { module = "com.android.tools.build:gradle", version.ref = "agp" }
+base-android-core = { module = "androidx.core:core-ktx", version.ref = "android-core" }
+base-android-annotations = { module = "androidx.annotation:annotation", version = "1.3.0" }
+
+base-android-appcompat = { module = "androidx.appcompat:appcompat", version.ref = "android-appcompat" }
+base-android-appcompatResources = { module = "androidx.appcompat:appcompat-resources", version.ref = "android-appcompat" }
+base-android-ktx-activity = { module = "androidx.activity:activity-ktx", version.ref = "android-appcompat" }
+base-android-ktx-fragment = { module = "androidx.fragment:fragment-ktx", version.ref = "android-appcompat" }
+
+base-android-recyclerview = { module = "androidx.recyclerview:recyclerview", version.ref = "android-recyclerview" }
+base-android-recyclerviewSelection = { module = "androidx.recyclerview:recyclerview-selection", version.ref = "android-recyclerviewSelection" }
+base-android-constraintlayout = { module = "androidx.constraintlayout:constraintlayout", version.ref = "android-constraintlayout" }
+base-android-material = { module = "com.google.android.material:material", version.ref = "android-material" }
+base-android-paging-runtime = { "module" = "androidx.paging:paging-runtime", version.ref = "android-paging" }
+base-android-preferences = { "module" = "androidx.preference:preference-ktx", version.ref = "android-preferences" }
+base-android-biometric = { "module" = "androidx.biometric:biometric-ktx", version.ref = "android-biometric" }
+
+base-android-lifecycle-viewmodel = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "android-lifecycle-base" }
+base-android-lifecycle-viewmodelSavedState = { module = "androidx.lifecycle:lifecycle-viewmodel-savedstate", version.ref = "android-lifecycle-base" }
+base-android-lifecycle-viewmodelCompose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "android-lifecycle-base" }
+base-android-lifecycle-runtime = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "android-lifecycle-base" }
+base-android-lifecycle-compiler = { module = "androidx.lifecycle:lifecycle-compiler", version.ref = "android-lifecycle-base" }
+base-android-lifecycle-service = { module = "androidx.lifecycle:lifecycle-service", version.ref = "android-lifecycle-base" }
+
+base-android-work-runtime = { module = "androidx.work:work-runtime-ktx", version.ref = "android-work" }
+
+base-android-navigation-fragment = { module = "androidx.navigation:navigation-fragment-ktx", version.ref = "android-navigation" }
+base-android-navigation-fragmentDynamicFeatures = { module = "androidx.navigation:navigation-dynamic-features-fragment", version.ref = "android-navigation" }
+base-android-navigation-ui = { module = "androidx.navigation:navigation-ui-ktx", version.ref = "android-navigation" }
+
+base-android-security-crypto = { module = "androidx.security:security-crypto-ktx", version.ref = "android-security-base" }
+base-android-security-identity = { module = "androidx.security:security-identity-credential", version.ref = "android-security-identity" }
+base-android-security-app-authenticator = { module = "androidx.security:security-app-authenticator", version.ref = "android-security-appAuthenticator" }
+
+base-android-camera-core = { module = "androidx.camera:camera-core", version.ref = "android-camera" }
+base-android-camera-camera2 = { module = "androidx.camera:camera-camera2", version.ref = "android-camera" }
+base-android-camera-lifecycle = { module = "androidx.camera:camera-lifecycle", version.ref = "android-camera" }
+base-android-camera-view = { module = "androidx.camera:camera-view", version.ref = "android-camera" }
+base-android-camera-extensions = { module = "androidx.camera:camera-extensions", version.ref = "android-camera" }
+
+google-ml-barcodeScanning = { module = "com.google.mlkit:barcode-scanning", version.ref = "google-ml" }
+
+base-hilt-gradle = { module = "com.google.dagger:hilt-android-gradle-plugin", version.ref = "hilt-base" }
+base-hilt-core = { module = "com.google.dagger:hilt-android", version.ref = "hilt-base" }
+base-hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "hilt-base" }
+
+google-gms-auth = { module = "com.google.android.gms:play-services-auth", version.ref = "gms-auth" }
+google-gms-drive = { module = "com.google.android.gms:play-services-drive", version.ref = "gms-drive" }
+google-gms-gcm = { module = "com.google.android.gms:play-services-gcm", version.ref = "gms-gcm" }
+google-api-client = { module = "com.google.api-client:google-api-client-android", version.ref = "google-api" }
+
+log-timber = { module = "com.jakewharton.timber:timber", version.ref = "timber"}
+log-sl4j = { module = "org.slf4j:slf4j-simple", version.ref = "sl4j"}
+
+db-leveldb = { module = "com.edwardstock:leveldb-android", version = "1.0.2" }
+db-hawk-core = { module = "com.edwardstock:hawk", version = "3.0.3" }
+db-hawk-moshi = { module = "com.edwardstock:hawk-moshi-adapter", version = "3.0.3" }
+
+auth-appauth = { module = "net.openid:appauth", version.ref = "appauth" }
+#auth-firebase = { module = "com.firebaseui:firebase-auth", version = "firebase-auth" }
+#auth-firebaseUI = { module = "com.firebaseui:firebase-ui-auth", version = "firebase-auth" }
+
+
+# NETWORK
+network-ktor-base-tls = { module = "io.ktor:ktor-network-tls-certificates", version.ref = "ktor-base" }
+network-ktor-client-android = { module = "io.ktor:ktor-client-android", version.ref = "ktor-base" }
+network-ktor-server-base = { module = "io.ktor:ktor-server", version.ref = "ktor-base" }
+network-ktor-server-core = { module = "io.ktor:ktor-server-core", version.ref = "ktor-base" }
+network-ktor-server-io-cio = { module = "io.ktor:ktor-server-cio", version.ref = "ktor-base" }
+network-ktor-server-websocket = { module = "io.ktor:ktor-server-websockets", version.ref = "ktor-base" }
+network-ktor-server-statusPages = { module = "io.ktor:ktor-server-status-pages", version.ref = "ktor-base" }
+network-ktor-server-defaultHeaders = { module = "io.ktor:ktor-server-default-headers", version.ref = "ktor-base" }
+
+# TESTS
+test-base-kotlin-coroutines = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "kotlin-coroutines" }
+
+# SERIALIZERS
+serializers-json-kotlin-base = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlin-serialization-json" }
+serializers-json-moshi-processor = { module = "com.squareup.moshi:moshi-kotlin-codegen", version.ref = "moshi" }
+serializers-json-moshi-base = { module = "com.squareup.moshi:moshi-kotlin", version.ref = "moshi" }
+serializers-json-moshi-adapters = { module = "com.squareup.moshi:moshi-adapters", version.ref = "moshi" }
+
+ui-paris-api = { module = "com.airbnb.android:paris", version.ref = "paris" }
+ui-paris-processor = { module = "com.airbnb.android:paris-processor", version.ref = "paris" }
+
+# CRYPTO
+crypto-spongycastle-prov = { module = "com.madgag.spongycastle:prov", version.ref = "spongycastle" }
+crypto-spongycastle-core = { module = "com.madgag.spongycastle:core", version.ref = "spongycastle" }
+crypto-spongycastle-bcpkix = { module = "com.madgag.spongycastle:core", version.ref = "spongycastle" }
+crypto-eddsa = { module = "net.i2p.crypto:eddsa", version.ref = "eddsa" }
+crypto-argon2 = { module = "org.signal:argon2", version = "13.1" }
+
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+android-library = { id = "com.android.library", version.ref = "agp" }
+
+androidx-navigation-safeArgs = { id = "androidx.navigation.safeargs.kotlin", version.ref = "android-navigation" }
+
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin-base" }
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin-base" }
+kotlin-parcelize = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "kotlin-base" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin-base" }
+kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin-base" }
+
+hilt-android = { id = "com.google.dagger.hilt.android", version.ref = "hilt-base" }
+
+protobuf = { id = "com.google.protobuf", version.ref = "protobuf" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+googleServices = { id = "com.google.gms.google-services", version.ref = "google-services" }
+
+wire = { id = "com.squareup.wire", version.ref = "wire-base" }
